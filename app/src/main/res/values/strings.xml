@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">wanted_preonboarding_android</string>
+    <string name="title_bar_home">NewsApp</string>
+    <string name="navigation_home">Home</string>
+    <string name="navigation_dashboard">Dashboard</string>
+    <string name="navigation_notifications">Notifications</string>
+</resources>
