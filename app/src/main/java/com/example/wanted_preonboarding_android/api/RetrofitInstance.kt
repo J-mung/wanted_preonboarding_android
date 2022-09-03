@@ -1,6 +1,6 @@
 package com.example.wanted_preonboarding_android.api
 
-import com.example.wanted_preonboarding_android.utils.Contants.Companion.BASE_URL
+import com.example.wanted_preonboarding_android.utils.Constants.Companion.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
