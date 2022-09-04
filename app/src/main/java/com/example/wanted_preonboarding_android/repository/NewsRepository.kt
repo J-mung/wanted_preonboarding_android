@@ -1,6 +1,7 @@
 package com.example.wanted_preonboarding_android.repository
 
 import com.example.wanted_preonboarding_android.api.RetrofitInstance
+import com.example.wanted_preonboarding_android.db.ArticleDatabase
 import com.example.wanted_preonboarding_android.models.Article
 
 class NewsRepository(
