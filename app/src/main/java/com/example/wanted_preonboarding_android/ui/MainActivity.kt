@@ -1,10 +1,12 @@
 package com.example.wanted_preonboarding_android.ui
 
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.wanted_preonboarding_android.R
@@ -15,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var viewModel: NewsViewModel
     lateinit var nav_view: BottomNavigationView
-    lateinit var newNavHostFragment: Fragment
+    lateinit var newNavHostFragment: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
