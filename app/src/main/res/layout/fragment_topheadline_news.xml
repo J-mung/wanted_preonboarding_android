@@ -12,7 +12,7 @@
         android:paddingBottom="50dp"/>
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/paginationProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="?attr/progressBarStyle"

@@ -3,23 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/topHeadlineNewsFragment">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.wanted_preonboarding_android.ui.home.HomeFragment"
-        android:label="@string/title_bar_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/topHeadlineNewsFragment"
+        android:name="com.example.wanted_preonboarding_android.ui.fragments.TopHeadlineNewsFragment"
+        android:label="TopHeadlineNewsFragment" >
+        <action
+            android:id="@+id/action_topHeadlineNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.wanted_preonboarding_android.ui.dashboard.DashboardFragment"
-        android:label="@string/title_bar_home"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.wanted_preonboarding_android.ui.notifications.NotificationsFragment"
-        android:label="@string/title_bar_home"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/articleFragment"
+        android:name="com.example.wanted_preonboarding_android.ui.fragments.ArticleFragment"
+        android:label="ArticleFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.example.wanted_preonboarding_android.models.Article" />
+    </fragment>
 </navigation>
