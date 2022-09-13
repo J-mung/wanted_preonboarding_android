@@ -50,7 +50,7 @@ class NewsViewModel(
     }
 
     fun saveArticle(article: Article) = viewModelScope.launch {
-        newsRepository.upsert(article)
+        newsRepository.insert(article)
     }
 
     fun getSavedNews() = newsRepository.getSavedNews()
