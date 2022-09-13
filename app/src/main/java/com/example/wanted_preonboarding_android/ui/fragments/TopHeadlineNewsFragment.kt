@@ -6,19 +6,21 @@ import android.view.View
 import android.widget.AbsListView
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wanted_preonboarding_android.R
 import com.example.wanted_preonboarding_android.adapter.NewsAdapter
+import com.example.wanted_preonboarding_android.ui.MainActivity
 import com.example.wanted_preonboarding_android.ui.NewsViewModel
 import com.example.wanted_preonboarding_android.utils.Constants.Companion.QUERY_PAGE_SIZE
 import com.example.wanted_preonboarding_android.utils.Resource
 
 class TopHeadlineNewsFragment : Fragment(R.layout.fragment_topheadline_news) {
 
-    lateinit var viewModel: NewsViewModel
+    private val viewModel : NewsViewModel by activityViewModels()
     lateinit var newsAdapter: NewsAdapter
     lateinit var rvTopHeadlineNews: RecyclerView
     lateinit var paginationProgressBar: ProgressBar
@@ -27,7 +29,7 @@ class TopHeadlineNewsFragment : Fragment(R.layout.fragment_topheadline_news) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = (activity as MainActivity).viewModel
+        rvTopHeadlineNews = view.findViewById(R.id.rvTopHeadlineNews)
         setupRecyclerView()
 
         newsAdapter.setOnItemClickListener {
@@ -41,7 +43,6 @@ class TopHeadlineNewsFragment : Fragment(R.layout.fragment_topheadline_news) {
             )
         }
 
-        rvTopHeadlineNews = view.findViewById(R.id.rvTopHeadlineNews)
         paginationProgressBar = view.findViewById(R.id.paginationProgressBar)
         viewModel.topHeadlinesNews.observe(viewLifecycleOwner, Observer { response ->
             when (response) {
