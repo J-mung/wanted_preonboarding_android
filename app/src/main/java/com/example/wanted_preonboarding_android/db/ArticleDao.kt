@@ -8,7 +8,7 @@ import com.example.wanted_preonboarding_android.models.Article
 interface ArticleDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsert(article: Article): Long // returns the id's of the article
+    suspend fun insert(article: Article): Long // returns the id's of the article
 
     @Query("SELECT * FROM articles")
     fun getAllArticles(): LiveData<List<Article>>

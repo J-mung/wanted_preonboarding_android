@@ -7,6 +7,7 @@ import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.example.wanted_preonboarding_android.R
+import com.example.wanted_preonboarding_android.ui.MainActivity
 import com.example.wanted_preonboarding_android.ui.NewsViewModel
 
 class ArticleFragment : Fragment(R.layout.fragment_article) {

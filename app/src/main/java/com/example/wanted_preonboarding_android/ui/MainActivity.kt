@@ -4,10 +4,9 @@ import android.os.Bundle
 import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.wanted_preonboarding_android.R
 import com.example.wanted_preonboarding_android.db.ArticleDatabase
@@ -17,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var viewModel: NewsViewModel
     lateinit var nav_view: BottomNavigationView
-    lateinit var newNavHostFragment: View
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +26,9 @@ class MainActivity : AppCompatActivity() {
         val viewModelProviderFactory = NewsViewModelProviderFactory(newsRepository)
         viewModel = ViewModelProvider(this, viewModelProviderFactory).get(NewsViewModel::class.java)
         nav_view = findViewById(R.id.nav_view)
-        newNavHostFragment = findViewById(R.id.newsNavHostFragment)
-        nav_view.setupWithNavController(newNavHostFragment.findNavController())
+        val newNavHostFragment = supportFragmentManager.findFragmentById(R.id.newsNavHostFrag) as NavHostFragment
+        val navController = newNavHostFragment.navController
+        nav_view = findViewById(R.id.nav_view)
+        nav_view.setupWithNavController(navController)
     }
 }
