@@ -9,14 +9,19 @@
         android:layout_height="match_parent"
         android:id="@+id/rvTopHeadlineNews"
         android:clipToPadding="false"
-        android:paddingBottom="50dp"/>
+        android:paddingBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ProgressBar
         android:id="@+id/paginationProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="?attr/progressBarStyle"
-        android:background="@color/purple_500"
+        android:background="@color/white"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/rvTopHeadlineNews"
