@@ -21,4 +21,23 @@
             android:name="article"
             app:argType="com.example.wanted_preonboarding_android.models.Article" />
     </fragment>
+    <fragment
+        android:id="@+id/categoryListFragment"
+        android:name="com.example.wanted_preonboarding_android.ui.fragments.CategoryListFragment"
+        android:label="CategoryListFragment" >
+        <action
+            android:id="@+id/action_categoryListFragment_to_categoryNewsFragment"
+            app:destination="@id/categoryNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryNewsFragment"
+        android:name="com.example.wanted_preonboarding_android.ui.fragments.CategoryNewsFragment"
+        android:label="CategoryNewsFragment" >
+        <action
+            android:id="@+id/action_categoryNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
 </navigation>
