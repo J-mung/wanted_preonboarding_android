@@ -3,8 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_business_48px.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_entertainment.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_general_48px.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_groups-48px.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_groups_48px.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_health_48px.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_roundedbutton_entertainment.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_roundedbutton_general.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_roundedbutton_health.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_roundedbutton_science.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_roundedbutton_sports.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/ic_roundedbutton_technology.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/drawable/rounded_button.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/layout/fragment_article.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/layout/fragment_category_list.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/layout/fragment_category_news.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/layout/fragment_dashboard.xml" value="0.23229166666666667" />
         <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/layout/fragment_home.xml" value="0.11296859169199595" />
         <entry key="..\:/AndroidStudioProjects/wanted_preonboarding_android/app/src/main/res/layout/fragment_notifications.xml" value="0.23229166666666667" />
