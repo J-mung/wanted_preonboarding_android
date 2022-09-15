@@ -10,7 +10,7 @@ class NewsRepository(
     suspend fun getTopHeadlineNews(countryCode: String, pageNumber: Int) =
         RetrofitInstance.api.getTopHeadlineNews(countryCode, pageNumber)
 
-    suspend fun categoryNews(countryCode: String, categoryCode: String, pageNumber: Int) =
+    suspend fun getCategoryNews(countryCode: String, categoryCode: String, pageNumber: Int) =
         RetrofitInstance.api.getCategoryNews(countryCode, categoryCode, pageNumber)
 
     suspend fun insert(article: Article) = db.getArticleDao().insert(article)
