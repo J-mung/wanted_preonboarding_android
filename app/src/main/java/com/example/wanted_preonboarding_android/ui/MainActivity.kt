@@ -4,15 +4,19 @@ import android.os.Bundle
 import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.wanted_preonboarding_android.R
+import com.example.wanted_preonboarding_android.communicator.Communicator
 import com.example.wanted_preonboarding_android.db.ArticleDatabase
 import com.example.wanted_preonboarding_android.repository.NewsRepository
+import com.example.wanted_preonboarding_android.ui.fragments.CategoryListFragment
+import com.example.wanted_preonboarding_android.ui.fragments.CategoryNewsFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Communicator {
 
     lateinit var viewModel: NewsViewModel
     lateinit var nav_view: BottomNavigationView
@@ -30,5 +34,19 @@ class MainActivity : AppCompatActivity() {
         val navController = newNavHostFragment.navController
         nav_view = findViewById(R.id.nav_view)
         nav_view.setupWithNavController(navController)
+    }
+
+    override fun passDataCom(category: String) {
+        val bundle = Bundle()
+        bundle.putString("category_txt", category)
+
+        val transaction = this.supportFragmentManager.beginTransaction()
+        val cateNewsFrag = CategoryNewsFragment()
+        cateNewsFrag.arguments = bundle
+
+        transaction.replace(R.id.container, cateNewsFrag)
+        transaction.addToBackStack(null)
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+        transaction.commit()
     }
 }

@@ -29,6 +29,7 @@ class CategoryListFragment : Fragment(R.layout.fragment_category_list){
         btnScience = view.findViewById(R.id.btnScience)
         btnSports = view.findViewById(R.id.btnSports)
         btnTechnology = view.findViewById(R.id.btnTechnology)
+        comm = requireActivity() as Communicator
 
         btnBusiness.setOnClickListener {
             comm.passDataCom(btnBusiness.text.toString())
