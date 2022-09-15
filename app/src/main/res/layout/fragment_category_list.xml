@@ -33,7 +33,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Business"
+                    android:text="business"
                     android:textColor="#000000"
                     android:textSize="15dp"
                     android:textStyle="bold" />
@@ -59,7 +59,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Entertainment"
+                    android:text="entertainment"
                     android:textColor="#000000"
                     android:textSize="15dp"
                     android:textStyle="bold" />
@@ -84,7 +84,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="General"
+                    android:text="general"
                     android:textColor="#000000"
                     android:textSize="15dp"
                     android:textStyle="bold" />
@@ -115,7 +115,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Health"
+                    android:text="health"
                     android:textColor="#000000"
                     android:textSize="15dp"
                     android:textStyle="bold" />
@@ -140,7 +140,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Science"
+                    android:text="science"
                     android:textColor="#000000"
                     android:textSize="15dp"
                     android:textStyle="bold" />
@@ -165,7 +165,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sports"
+                    android:text="sports"
                     android:textColor="#000000"
                     android:textSize="15dp"
                     android:textStyle="bold" />
@@ -190,7 +190,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Technology"
+                android:text="technology"
                 android:textColor="#000000"
                 android:textSize="15dp"
                 android:textStyle="bold" />
