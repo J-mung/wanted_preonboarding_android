@@ -16,7 +16,7 @@ import com.example.wanted_preonboarding_android.repository.NewsRepository
 import com.example.wanted_preonboarding_android.ui.fragments.CategoryListFragment
 import com.example.wanted_preonboarding_android.ui.fragments.CategoryNewsFragment
 
-class MainActivity : AppCompatActivity(), Communicator {
+class MainActivity : AppCompatActivity() {
 
     lateinit var viewModel: NewsViewModel
     lateinit var nav_view: BottomNavigationView
@@ -34,19 +34,5 @@ class MainActivity : AppCompatActivity(), Communicator {
         val navController = newNavHostFragment.navController
         nav_view = findViewById(R.id.nav_view)
         nav_view.setupWithNavController(navController)
-    }
-
-    override fun passDataCom(category: String) {
-        val bundle = Bundle()
-        bundle.putString("category_txt", category)
-
-        val transaction = this.supportFragmentManager.beginTransaction()
-        val cateNewsFrag = CategoryNewsFragment()
-        cateNewsFrag.arguments = bundle
-
-        transaction.replace(R.id.container, cateNewsFrag)
-        transaction.addToBackStack(null)
-        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-        transaction.commit()
     }
 }

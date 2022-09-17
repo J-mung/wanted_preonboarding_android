@@ -4,16 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvRequestCategory"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategoryNews"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Choose a category to start reading"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/paginationProgressBar"
+        style="?attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rvCategoryNews"
+        app:layout_constraintStart_toStartOf="@+id/rvCategoryNews"
+        app:layout_constraintTop_toTopOf="@+id/rvCategoryNews" />
 
 
 

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.wanted_preonboarding_android.R
 import com.example.wanted_preonboarding_android.communicator.Communicator
 
@@ -32,7 +33,13 @@ class CategoryListFragment : Fragment(R.layout.fragment_category_list){
         comm = requireActivity() as Communicator
 
         btnBusiness.setOnClickListener {
-            comm.passDataCom(btnBusiness.text.toString())
+            val bundle = Bundle().apply {
+                putString("category_txt", btnBusiness.text.toString())
+            }
+            findNavController().navigate(
+                R.id.action_categoryListFragment_to_categoryNewsFragment,
+                bundle
+            )
         }
 
         btnEntertainment.setOnClickListener {

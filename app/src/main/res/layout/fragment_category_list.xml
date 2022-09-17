@@ -9,6 +9,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvRequestCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a category to start reading"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <LinearLayout
             android:id="@+id/group1"
             android:layout_width="wrap_content"
@@ -28,6 +41,7 @@
                     android:id="@+id/btnBusiness"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:text="business"
                     android:background="@drawable/ic_roundedbutton_business" />
 
                 <TextView
@@ -54,6 +68,7 @@
                     android:id="@+id/btnEntertainment"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:text="entertainment"
                     android:background="@drawable/ic_roundedbutton_entertainment" />
 
                 <TextView
@@ -79,6 +94,7 @@
                     android:id="@+id/btnGeneral"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:text="general"
                     android:background="@drawable/ic_roundedbutton_general" />
 
                 <TextView
@@ -110,6 +126,7 @@
                     android:id="@+id/btnHealth"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:text="health"
                     android:background="@drawable/ic_roundedbutton_health" />
 
                 <TextView
@@ -135,6 +152,7 @@
                     android:id="@+id/btnScience"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:text="science"
                     android:background="@drawable/ic_roundedbutton_science" />
 
                 <TextView
@@ -160,6 +178,7 @@
                     android:id="@+id/btnSports"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:text="sports"
                     android:background="@drawable/ic_roundedbutton_sports" />
 
                 <TextView
@@ -185,6 +204,7 @@
                 android:id="@+id/btnTechnology"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:text="technology"
                 android:background="@drawable/ic_roundedbutton_technology" />
 
             <TextView
