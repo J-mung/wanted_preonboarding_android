@@ -4,218 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvRequestCategory"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_height="wrap_content"
+        android:text="Choose a category to start reading"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tvRequestCategory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Choose a category to start reading"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:paddingBottom="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategoryList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRequestCategory"/>
 
-        <LinearLayout
-            android:id="@+id/group1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:id="@+id/llBusiness"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="4dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/btnBusiness"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="business"
-                    android:background="@drawable/ic_roundedbutton_business" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="business"
-                    android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/llEntertainment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="4dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/btnEntertainment"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="entertainment"
-                    android:background="@drawable/ic_roundedbutton_entertainment" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="entertainment"
-                    android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llGeneral"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="4dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/btnGeneral"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="general"
-                    android:background="@drawable/ic_roundedbutton_general" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="general"
-                    android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/group2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:id="@+id/llHealth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="4dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/btnHealth"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="health"
-                    android:background="@drawable/ic_roundedbutton_health" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="health"
-                    android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llScience"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="4dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/btnScience"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="science"
-                    android:background="@drawable/ic_roundedbutton_science" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="science"
-                    android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llSports"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="4dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/btnSports"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="sports"
-                    android:background="@drawable/ic_roundedbutton_sports" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="sports"
-                    android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llTechnology"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="111dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/btnTechnology"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:text="technology"
-                android:background="@drawable/ic_roundedbutton_technology" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="technology"
-                android:textColor="#000000"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,6 +38,7 @@ class CategoryNewsFragment : Fragment(R.layout.fragment_category_news) {
         category = arguments?.getString("category_txt").toString()
         rvCategoryNews = view.findViewById(R.id.rvCategoryNews)
         setUpRecyclerView()
+        viewModel.getCategoryNews("us", category)
 
         newsAdapter.setOnItemClickListener {
             val bundle = Bundle().apply {
@@ -48,14 +49,6 @@ class CategoryNewsFragment : Fragment(R.layout.fragment_category_news) {
                 R.id.action_categoryNewsFragment_to_articleFragment,
                 bundle
             )
-        }
-
-        var job: Job? = null
-        if (category.toString().isNotEmpty()) {
-            job?.cancel()
-            job = MainScope().launch {
-                viewModel.getCategoryNews("us", category)
-            }
         }
 
         paginationProgressBar = view.findViewById(R.id.paginationProgressBar)
@@ -116,9 +109,9 @@ class CategoryNewsFragment : Fragment(R.layout.fragment_category_news) {
             val isAtLastItem = firstVisibleItemPosition + visibleItemCount >= totalItemCount
             val isNotAtBeginning = firstVisibleItemPosition >= 0
             val isTotalMoreThanVisible = totalItemCount >= QUERY_PAGE_SIZE
-            val sholdPaginate =
+            val shouldPaginate =
                 isNotLoadingAndNotLastPage && isAtLastItem && isNotAtBeginning && isTotalMoreThanVisible && isScrolling
-            if(sholdPaginate) {
+            if(shouldPaginate) {
                 viewModel.getCategoryNews("us", category)
                 isScrolling = false
             }
