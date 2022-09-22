@@ -27,6 +27,7 @@ class CategoryNewsFragment : Fragment(R.layout.fragment_category_news) {
     lateinit var rvCategoryNews: RecyclerView
     lateinit var paginationProgressBar: ProgressBar
     lateinit var category: String
+    var oldOne = "init"
 
     val TAG = "CategoryNewsFragment"
     var isLoading = false
@@ -38,7 +39,11 @@ class CategoryNewsFragment : Fragment(R.layout.fragment_category_news) {
         category = arguments?.getString("category_txt").toString()
         rvCategoryNews = view.findViewById(R.id.rvCategoryNews)
         setUpRecyclerView()
-        viewModel.getCategoryNews("us", category)
+
+        if (category.compareTo(oldOne) != 0) {
+            oldOne = category
+            viewModel.getCategoryNews("us", category)
+        }
 
         newsAdapter.setOnItemClickListener {
             val bundle = Bundle().apply {
