@@ -32,6 +32,11 @@ class NewsViewModel(
         topHeadlinesNews.postValue(handleTopHeadlinesNewsResponse(response))
     }
 
+    fun getAnotherCategory(categoryCode: String) {
+        categoryNewsResponse = null
+        getCategoryNews("us", categoryCode)
+    }
+
     fun getCategoryNews(countryCode: String, categoryCode: String) = viewModelScope.launch {
         categoryNews.postValue(Resource.Loading())
         val response = newsRepository.getCategoryNews(countryCode, categoryCode, categoryNewsPage)

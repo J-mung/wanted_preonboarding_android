@@ -16,9 +16,6 @@ import com.example.wanted_preonboarding_android.adapter.NewsAdapter
 import com.example.wanted_preonboarding_android.ui.NewsViewModel
 import com.example.wanted_preonboarding_android.utils.Constants.Companion.QUERY_PAGE_SIZE
 import com.example.wanted_preonboarding_android.utils.Resource
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.launch
 
 class CategoryNewsFragment : Fragment(R.layout.fragment_category_news) {
 
@@ -27,7 +24,7 @@ class CategoryNewsFragment : Fragment(R.layout.fragment_category_news) {
     lateinit var rvCategoryNews: RecyclerView
     lateinit var paginationProgressBar: ProgressBar
     lateinit var category: String
-    var oldOne = "init"
+    var oldCategory = "init"
 
     val TAG = "CategoryNewsFragment"
     var isLoading = false
@@ -40,9 +37,9 @@ class CategoryNewsFragment : Fragment(R.layout.fragment_category_news) {
         rvCategoryNews = view.findViewById(R.id.rvCategoryNews)
         setUpRecyclerView()
 
-        if (category.compareTo(oldOne) != 0) {
-            oldOne = category
-            viewModel.getCategoryNews("us", category)
+        if (!oldCategory.equals(category)) {
+            viewModel.getAnotherCategory(category)
+            oldCategory = category
         }
 
         newsAdapter.setOnItemClickListener {
