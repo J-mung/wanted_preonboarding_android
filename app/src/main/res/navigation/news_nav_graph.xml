@@ -40,4 +40,12 @@
             android:name="category"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/savedNewsFragment"
+        android:name="com.example.wanted_preonboarding_android.ui.fragments.SavedNewsFragment"
+        android:label="SavedNewsFragment" >
+        <action
+            android:id="@+id/action_savedNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
 </navigation>
