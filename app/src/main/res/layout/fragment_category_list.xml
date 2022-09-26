@@ -8,10 +8,11 @@
         android:id="@+id/tvRequestCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
         android:text="Choose a category to start reading"
-        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textSize="30dp"
         android:textStyle="bold"
-        android:paddingBottom="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

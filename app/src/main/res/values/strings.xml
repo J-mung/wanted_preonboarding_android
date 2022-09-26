@@ -6,8 +6,8 @@
     <string name="navigation_saved">Saved News</string>
     <string name="grid_img">grid_img</string>
     <string name="category_1">business</string>
-    <string name="category_2">entertainment</string>
-    <string name="category_3">general</string>
+    <string name="category_2">general</string>
+    <string name="category_3">entertainment</string>
     <string name="category_4">health</string>
     <string name="category_5">science</string>
     <string name="category_6">sports</string>
