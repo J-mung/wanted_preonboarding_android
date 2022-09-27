@@ -29,7 +29,7 @@ class TopHeadlineNewsFragment : Fragment(R.layout.fragment_topheadline_news) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        rvTopHeadlineNews = view.findViewById(R.id.rvTopHeadlineNews)
+        rvTopHeadlineNews = view.findViewById(R.id.rv_news)
         setupRecyclerView()
 
         newsAdapter.setOnItemClickListener {

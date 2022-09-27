@@ -63,7 +63,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/tvPublishedDate"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:text="김현수" />
+                tools:text="Author" />
 
             <TextView
                 android:id="@+id/tvPublishedDate"
@@ -75,7 +75,7 @@
                 android:text="@{news.publishedAt}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:text="3 hours ago" />
+                tools:text="Published Date" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

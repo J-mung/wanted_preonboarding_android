@@ -8,7 +8,8 @@
     <fragment
         android:id="@+id/topHeadlineNewsFragment"
         android:name="com.example.wanted_preonboarding_android.ui.fragments.TopHeadlineNewsFragment"
-        android:label="TopHeadlineNewsFragment" >
+        android:label="TopHeadlineNewsFragment"
+        tools:layout="@layout/fragment_topheadline_news">
         <action
             android:id="@+id/action_topHeadlineNewsFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
@@ -16,7 +17,8 @@
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.example.wanted_preonboarding_android.ui.fragments.ArticleFragment"
-        android:label="ArticleFragment" >
+        android:label="ArticleFragment"
+        tools:layout="@layout/fragment_article">
         <argument
             android:name="article"
             app:argType="com.example.wanted_preonboarding_android.models.Article" />
@@ -24,7 +26,8 @@
     <fragment
         android:id="@+id/categoryListFragment"
         android:name="com.example.wanted_preonboarding_android.ui.fragments.CategoryListFragment"
-        android:label="CategoryListFragment" >
+        android:label="CategoryListFragment"
+        tools:layout="@layout/fragment_category_list">
         <action
             android:id="@+id/action_categoryListFragment_to_categoryNewsFragment"
             app:destination="@id/categoryNewsFragment" />
@@ -32,7 +35,8 @@
     <fragment
         android:id="@+id/categoryNewsFragment"
         android:name="com.example.wanted_preonboarding_android.ui.fragments.CategoryNewsFragment"
-        android:label="CategoryNewsFragment" >
+        android:label="CategoryNewsFragment"
+        tools:layout="@layout/fragment_category_news">
         <action
             android:id="@+id/action_categoryNewsFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
@@ -43,7 +47,8 @@
     <fragment
         android:id="@+id/savedNewsFragment"
         android:name="com.example.wanted_preonboarding_android.ui.fragments.SavedNewsFragment"
-        android:label="SavedNewsFragment" >
+        android:label="SavedNewsFragment"
+        tools:layout="@layout/fragment_saved_news">
         <action
             android:id="@+id/action_savedNewsFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
