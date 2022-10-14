@@ -14,6 +14,7 @@ import com.example.wanted_preonboarding_android.adapter.CategoryAdapter
 import com.example.wanted_preonboarding_android.communicator.Communicator
 import com.example.wanted_preonboarding_android.models.CategorySource
 import com.example.wanted_preonboarding_android.ui.MainActivity
+import com.google.android.material.appbar.MaterialToolbar
 import org.w3c.dom.Text
 
 class CategoryListFragment : Fragment(R.layout.fragment_category_list){
@@ -21,11 +22,14 @@ class CategoryListFragment : Fragment(R.layout.fragment_category_list){
     lateinit var categoryAdapter: CategoryAdapter
     lateinit var rvCategoryList: RecyclerView
     lateinit var mContext: Context
+    lateinit var tbTitleBar: MaterialToolbar
 
     val TAG = "CategoryListFragment"
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        tbTitleBar = view.findViewById(R.id.tb_title_bar)
+        tbTitleBar.title = getString(R.string.navigation_category)
         rvCategoryList = view.findViewById(R.id.rvCategoryList)
         setUpRecyclerView()
 

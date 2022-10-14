@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.wanted_preonboarding_android.R
 import com.example.wanted_preonboarding_android.adapter.NewsAdapter
 import com.example.wanted_preonboarding_android.ui.NewsViewModel
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.snackbar.Snackbar
 
 class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
@@ -19,10 +20,13 @@ class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
     private val viewModel: NewsViewModel by activityViewModels()
     lateinit var newsAdapter: NewsAdapter
     lateinit var rvSavedNews: RecyclerView
+    lateinit var tbTitleBar: MaterialToolbar
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        rvSavedNews = view.findViewById(R.id.rvSavedNews)
+        tbTitleBar = view.findViewById(R.id.tb_title_bar)
+        tbTitleBar.title = getString(R.string.navigation_saved)
+        rvSavedNews = view.findViewById(R.id.rv_news)
         setupRecyclerView()
 
         newsAdapter.setOnItemClickListener {

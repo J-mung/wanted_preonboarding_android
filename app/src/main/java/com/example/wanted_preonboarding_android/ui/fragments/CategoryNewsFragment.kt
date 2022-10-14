@@ -16,6 +16,7 @@ import com.example.wanted_preonboarding_android.adapter.NewsAdapter
 import com.example.wanted_preonboarding_android.ui.NewsViewModel
 import com.example.wanted_preonboarding_android.utils.Constants.Companion.QUERY_PAGE_SIZE
 import com.example.wanted_preonboarding_android.utils.Resource
+import com.google.android.material.appbar.MaterialToolbar
 
 class CategoryNewsFragment : Fragment(R.layout.fragment_category_news) {
 
@@ -24,6 +25,7 @@ class CategoryNewsFragment : Fragment(R.layout.fragment_category_news) {
     lateinit var rvCategoryNews: RecyclerView
     lateinit var paginationProgressBar: ProgressBar
     lateinit var category: String
+    lateinit var tbTitleBar: MaterialToolbar
     var oldCategory = "init"
 
     val TAG = "CategoryNewsFragment"
@@ -34,7 +36,9 @@ class CategoryNewsFragment : Fragment(R.layout.fragment_category_news) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         category = arguments?.getString("category_txt").toString()
-        rvCategoryNews = view.findViewById(R.id.rvCategoryNews)
+        tbTitleBar = view.findViewById(R.id.tb_title_bar)
+        tbTitleBar.title = getString(R.string.navigation_category)
+        rvCategoryNews = view.findViewById(R.id.rv_news)
         setUpRecyclerView()
 
         if (!oldCategory.equals(category)) {

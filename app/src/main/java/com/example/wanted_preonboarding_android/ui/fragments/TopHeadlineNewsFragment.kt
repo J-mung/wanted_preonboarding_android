@@ -17,6 +17,7 @@ import com.example.wanted_preonboarding_android.ui.MainActivity
 import com.example.wanted_preonboarding_android.ui.NewsViewModel
 import com.example.wanted_preonboarding_android.utils.Constants.Companion.QUERY_PAGE_SIZE
 import com.example.wanted_preonboarding_android.utils.Resource
+import com.google.android.material.appbar.MaterialToolbar
 
 class TopHeadlineNewsFragment : Fragment(R.layout.fragment_topheadline_news) {
 
@@ -24,11 +25,14 @@ class TopHeadlineNewsFragment : Fragment(R.layout.fragment_topheadline_news) {
     lateinit var newsAdapter: NewsAdapter
     lateinit var rvTopHeadlineNews: RecyclerView
     lateinit var paginationProgressBar: ProgressBar
+    lateinit var tbTitleBar: MaterialToolbar
 
     val TAG = "TopHeadlineNewsFragment"
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        tbTitleBar = view.findViewById(R.id.tb_title_bar)
+        tbTitleBar.title = getString(R.string.navigation_topheadline)
         rvTopHeadlineNews = view.findViewById(R.id.rv_news)
         setupRecyclerView()
 
